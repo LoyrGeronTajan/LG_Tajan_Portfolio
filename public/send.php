@@ -26,9 +26,8 @@ if(isset($_POST['btn-send'])){
 
 
   //Recipients
-  $mail->setFrom($email, $name);
-  $mail->addAddress('personaltajanloyr@gmail.com', 'LG-Tajan');
-  $mail->addReplyTo('info@example.com', 'Information');
+  $mail->setFrom($email, 'LG-Tajan');
+  $mail->addAddress($email, $name);
   $mail->addBCC('personaltajanloyr@gmail.com');
 
   $mail->isHTML(true);
@@ -48,14 +47,14 @@ if(isset($_POST['btn-send'])){
     echo "
     <script>
     alert('Message sent!');
-    window.location.href='./index.html';
+    window.location.href='./index.php';
     </script>
     ";
   }
   else {
     echo "
     <script>
-    alert('Message not sent!').window.location.href='./index.html';
+    alert('Message not sent!').window.location.href='./index.php';
     </script>
     ";
   
