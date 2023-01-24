@@ -47,14 +47,14 @@ if(isset($_POST['btn-send'])){
     echo "
     <script>
     alert('Message sent!');
-    window.location.href='./index.php';
+    window.location.href='./index.html';
     </script>
     ";
   }
   else {
     echo "
     <script>
-    alert('Message not sent!').window.location.href='./index.php';
+    alert('Message not sent!').window.location.href='./index.html';
     </script>
     ";
   
